@@ -10,10 +10,10 @@
 {% endwith %}
 <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
     <form action="/login" method="POST" role="form">
-        {{ Login_form.hidden_tag() }}
-        {{ wtf.form_field(Login_form.email) }}
-        {{ wtf.form_field(Login_form.password) }}
-        {{ wtf.form_field(Login_form.remember) }}
+        {{ login_form.hidden_tag() }}
+        {{ wtf.form_field(login_form.email) }}
+        {{ wtf.form_field(login_form.password) }}
+        {{ wtf.form_field(login_form.remember) }}
        <button class="btn rounded btn-success" type="submit">Log In</button>
         <hr>
         <a href="/forget_password" class="text-info">Forget password</a>

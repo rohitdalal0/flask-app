@@ -53,17 +53,17 @@ def add_post():
 # url shortcut
 @app.route('/<string:no>/post')
 def post_direction(no):
-    one_post = db.session.query(Post).filter_by(id=no).first()
+    one_post = db.session.query(Post).filter_by(id=no)
     return render_template('post.html', posts=one_post)
 
 # login and signup page
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     login_form = Login_form()
-    user_check = db.session.query(Login).filter_by(email=login_form.email.data).first()
+    user_check = db.session.query(Login).filter_by(email=login_form.email.data)
 
     if login_form.validate_on_submit():
-        if (login_form.email.data == user_check.password) and (login_form.password.data == user_check.password):
+        if user_check and (login_form.password.data == user_check.password):
             login_user(user_check, remember=login_form.remember.data)
             return redirect(request.args.get('next'), url_for('/index'))
         else:
