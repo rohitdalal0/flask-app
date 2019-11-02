@@ -1,0 +1,13 @@
+{% extends 'admin/master.html' %}
+{% if 'user_name' in session %}
+{{ super() }}
+
+{% block brand %}
+<img src="{{url_for('static', filename='img/logo.png')}}" alt="logo"
+    style="width:50px;background: rgba(73, 58, 58, 0.445);">
+{% endblock brand %}
+
+{% block messages %}
+<h1>Hi, there.</h1>
+{% endblock messages %}
+{% endif %}

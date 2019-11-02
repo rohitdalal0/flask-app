@@ -1,0 +1,11 @@
+{% extends 'extend.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block body %}
+<div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+    {{ Signup_form.hidden_tag() }}
+    {{ wtf.form_field(Signup_form.username) }}
+    {{ wtf.form_field(Signup_form.email) }}
+    {{ wtf.form_field(Signup_form.password) }}
+    <button class="btn btn-success rounded">Sign Up</button>
+</div>
+{% endblock body %}

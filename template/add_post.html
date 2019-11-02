@@ -1,0 +1,35 @@
+{% extends 'extend.html' %}
+
+{% block body %}
+{% with errors = get_flashed_messages() %}
+
+{% if errors %}
+{% for error in errors %}
+<span class="alert alert-danger mt-3 float-right w-8 position-absolute text-center">{{error}}</span>
+{% endfor %}
+{% endif %}
+
+{% endwith %}
+<form action="/add_post" method="post" role="form" enctype="multipart/form-data">
+  <div class="container text-center bg-transparent mt-5">
+    <input class="p-2 w-75 bg-transparent" name="head" placeholder="Title" type="text" style="border-bottom: 1px solid tomato;"/>
+    <textarea class=" p-2 w-75 h-75 bg-transparent" cols="30" name="body" placeholder="Body" rows="15" style="border-bottom: 1px solid tomato;"></textarea>
+    <input class="p-2 w-75 bg-transparent" name="tag" placeholder="Tag" type="text" style="border-bottom: 1px solid tomato;"/>
+    <br><br>
+    <input type="file" name='file' class="bg-transparent">
+    <br>
+    <button class="btn rounded mt-4" style="color: tomato;" type="submit">Public</button>
+  </div>
+</form>
+
+<style>
+  #entry {
+    margin-top: 100px
+  }
+  .bg-transparent > .bg-transparent{
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+  }
+</style>
+{% endblock %}

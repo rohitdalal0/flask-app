@@ -1,0 +1,25 @@
+{% extends 'extend.html' %}
+{% block body %}
+
+<!-- Post Content -->
+{% for post in posts %}
+<article>
+  <div class="container mt-5 w-auto text-dark rounded">
+    <div class="container text-center">
+      {% with img='img/'+post.url %}
+      <div class="flex-row">
+        <h1 class="col-sm-4 col-lg-12 pt-3 align-self-sm-center" style="color: tomato;">{{post.title}}</h1>
+        <hr>
+        <div class="col-sm-4 col-lg-12"><img src="{{url_for('static',filename=img)}}" class="pb-3 pr-4" width="300" height="200">
+          <div class="col-sm-4 col-lg-12 pb-4 overflow-hidden">{{post.post}}</div>
+        </div>
+        <!-- <div class="col-lg-12 col-sm-4 w-auto">{{post.post}}</div> -->
+      </div>
+      {% endwith %}
+    </div>
+  </div>
+
+</article>
+
+{% endfor %}
+{% endblock body %}
