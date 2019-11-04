@@ -7,7 +7,7 @@ from model import *
 
 
 app = Flask(__name__, static_folder='static', template_folder='template')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://rohit:password@localhost/flask'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'SecretKey'
 
@@ -60,7 +60,7 @@ def post_direction(no):
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     login_form = Login_form()
-    user_check = db.session.query(Login).filter_by(email=login_form.email.data)
+    user_check = db.session.query(Login).filter_by(email=login_form.email.data).first()
 
     if login_form.validate_on_submit():
         if user_check and (login_form.password.data == user_check.password):
