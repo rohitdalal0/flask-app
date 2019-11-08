@@ -1,0 +1,15 @@
+#collapsibleNavbar > ul.navbar-nav.ml-auto > li a{
+    padding: 20px 10px;
+    color:#95d1a3;
+}
+#collapsibleNavbar > ul.navbar-nav.ml-auto > li:hover a, #collapsibleNavbar > ul:nth-child(1) > li:hover a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+#side-div > .container > .row{
+    height: 700px;
+    overflow: auto;
+}
+#side-div > .container > .row h5{
+    padding: 5px 10px;
+}
