@@ -1,11 +1,10 @@
 {% extends 'extend.html' %}
 {% import 'bootstrap/wtf.html' as wtf %}
 {% block body %}
-
 {% with errors = get_flashed_messages() %}
 {% if errors %}
 {% for error in errors %}
-<span id="error" class=" alert alert-danger text-center" style="position: absolute;align-right;">{{error}} <span onclick="$('span[id=error]').hide()" style="font-size:20px; margin-left:10px; cursor:pointer;">&times;</span> </span>
+<span class="w-10 alert alert-danger" style="position: absolute;align-right;">{{error}}</span>
 {% endfor %}
 {% endif %}
 {% endwith %}

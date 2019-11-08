@@ -1,10 +1,10 @@
 from flask_admin.contrib.sqla import ModelView
 from flask_login import UserMixin
 import datetime
-from flask_wtf import Form, RecaptchaField
+from flask_wtf import FlaskForm
 from wtforms import StringField, BooleanField, PasswordField
 from wtforms.validators import input_required, Length, Email
-from run import db, admin
+from run import db
 
 
 date = datetime.datetime.strftime(datetime.datetime.now(), '%B %d, %Y')
@@ -45,30 +45,33 @@ class Login(db.Model, UserMixin):
     password = db.Column('Password', db.String(50), nullable=False)
     date = db.Column('Date', db.String(20), nullable=False, default=date)
 
+    @property
     def is_authenticated(self):
         return True
+    @property
     def is_active(self):
         return True
+    @property
     def is_anonymous(self):
-        return False
+        return True
+    @property
     def get_id(self):
-        return self.email
+        return self.id
+    @property
     def __repr__(self):
-        return '<Login(id=%s, name=%s, email=%s, password=%s, date=%s)>' % (self.id, self.name, self.email, self.password, self.date)
+        return '<Login(name=%s, email=%s, password=%s, date=%s)>' % (self.name, self.email, self.password, self.date)
 
-class LoginForm(Form):
+class Login_form(FlaskForm):
     email = StringField('Email *', validators=[input_required()])
     password = PasswordField('Password *', validators=[input_required(), Length(min=8, max=20)])
     remember = BooleanField('Remember me')
 
-class SignupForm(Form):
+class Signup_form(FlaskForm):
     username = StringField('Username *', validators=[input_required(), Length(min=5, max=15)])
     email = StringField('Email *', validators=[input_required(), Email('Invalid email*')])
     password = PasswordField('Password *', validators=[input_required(), Length(min=8, max=20)])
-    recaptcha = RecaptchaField()
 
-
-admin.add_views(ModelView(Post, db.session))
-admin.add_view(ModelView(Login, db.session))
-admin.add_view(ModelView(Contacts, db.session))
+# admin.add_views(ModelView(Post, db.session))
+# admin.add_view(ModelView(Login, db.session))
+# admin.add_view(ModelView(Contacts, db.session))
 
