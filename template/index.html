@@ -13,7 +13,7 @@
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/index.css') }}">
 
   <!-- Font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"  crossorigin="anonymous">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -28,15 +28,15 @@
 
 <body>
   <header>
-    <div class="container-fluid bg-success">
+    <div class="container-fluid bg-success text-center">
       <!-- Brand -->
-      <a class="navbar-brand align-content-center" href="/"><img src="{{url_for('static', filename='img/anonymous.jpg')}}" width="50" height="50"></a>
+      <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='img/logo.jpg')}}" width="100" height="100"></a>
     </div>
 
     <nav class="navbar navbar-expand-md bg-success navbar-dark p-3">
     
       <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
     
@@ -44,19 +44,25 @@
       <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">home</a>
+            <a class="nav-link" href=""><span class="fas fa-list"></span> Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/sports">Sports</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/money">Money<a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/investment">Investment</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/bussiness">Bussiness</a>
+            </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
-          <li><a href="/login" class="text-secondary"><span class="fas fa-cloud"></span> Log in</a></li>
-          <li><a href="/signup" class="text-secondary"><span class="fas fa-user"></span> Sign up</a></li>
+          <li><a href="/login"><span class="fas fa-cloud"></span> Log in</a></li>
+          <li><a href="/signup"><span class="fas fa-user"></span> Sign up</a></li>
         </ul>
 
       </div>
@@ -64,10 +70,71 @@
   </header>
 
 
-  <div id="content-box" class="container-fluid">
-    <div>hi,rohit</div>
+  <div class="container-fluid d-flex flex-row mt-5" style="background: red;">
+    <!-- News carsaoul -->
+    <div id="content-box" class="col-lg-8 col-sm-12">
+      <div class="container">
+        <div id="main-slider" class="container">
+          <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active rounded-sm">
+                <img src="{{url_for('static', filename='img/img1.jpg')}}" width="700" height="350" alt="Los Angeles">
+              </div>
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='img/img2.jpg')}}" width="700" height="350" alt="Los Angeles">
+              </div>
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='img/img3.jpg')}}" width="700" height="350" alt="Los Angeles">
+              </div>
+              <div class="carousel-item">
+                  <img src="{{url_for('static', filename='img/img4.jpg')}}" width="700" height="350" alt="Los Angeles">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- Side container -->
+    <div id="side-div" class="col-lg-4 col-sm-12 rounded-lg">
+      <div class="container"><h5>Today</h5>
+        <div class="row">
+            <div class="container-fluid" id="items-div" style="background:yellow;">
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <hr>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
-
+<footer>
+  <div class="container-fluid">
+    <h1 class="text-center">Footer</h1>
+  </div>
+</footer>
 </body>
 </html>
