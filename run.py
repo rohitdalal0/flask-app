@@ -8,7 +8,7 @@ from model import *
 
 
 app = Flask(__name__, static_folder='static', template_folder='template')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://rohit:password@localhost/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://localhost:password@localhost/flask'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'SuperSecret'
 app.config['RECAPTCHA_PUBLIC_KEY'] = '6LftGcEUAAAAAKjlrMb4UQ3OEfSJ4WoW32aRg_Yk'
@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.login_view = 'login'
 bootstrap = Bootstrap(app)
-admin = Admin(app)
+admin = Admin(app) 
 
 # init
 db.init_app(app)
