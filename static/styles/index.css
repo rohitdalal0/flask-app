@@ -1,23 +1,25 @@
 #collapsibleNavbar > ul.navbar-nav.ml-auto > li a{
     padding: 20px 10px;
-    color:#95d1a3;
+    color: #8dcfdb;
 }
 #collapsibleNavbar > ul.navbar-nav.ml-auto > li:hover a, #collapsibleNavbar > ul:nth-child(1) > li:hover a{
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-#side-div > .container > .row{
-    height: 400px;
-    overflow: auto;
-    border: 1px solid black;
-    border-radius: 5px;
+#side-div > .container-fluid > .row{
+    height: 350px;
+    overflow-y: scroll;
 }
-#side-div > .container > .row h5{
-    padding: 5px 10px;
+#side-div > .container-fluid > .row h5{
+    padding: 10px 10px;
 }
-#side-div #side-header{
-    background: #51a846;
+#side-div #solid-line{
+    background-color: #8dcfdb;
 }
-#side-div > .container{
-    border: 1px solid tomato;
+#side-div > .container-fluid{
+    border-left: .5px solid rgb(223, 223, 223);
+    border-right: .5px solid rgb(223, 223, 223)2;
+    border-bottom: .5px solid rgb(223, 223, 223);
+    border-bottom-right-radius: 1px;
+    border-bottom-left-radius: 5px;
 }

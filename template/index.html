@@ -27,14 +27,10 @@
 </head>
 
 <body>
+<!--  start top header -->
   <header>
-    <div class="container-fluid bg-success text-center">
-      <!-- Brand -->
-      <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='img/logo.jpg')}}" width="100" height="100"></a>
-    </div>
-
-    <nav class="navbar navbar-expand-md bg-success navbar-dark p-3">
-    
+    <div class="navbar navbar-expand-md bg-info navbar-dark p-3">
+      <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='img/logo.jpg')}}" width="50" height="50"></a>
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -44,12 +40,6 @@
       <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href=""><span class="fas fa-list"></span> Category</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/sports">Sports</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/money">Money<a>
           </li>
           <li class="nav-item">
@@ -58,6 +48,9 @@
           <li class="nav-item">
               <a class="nav-link" href="/bussiness">Bussiness</a>
             </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span class="fas fa-list"></span> Category</a>
+          </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
@@ -66,75 +59,68 @@
         </ul>
 
       </div>
-    </nav>
+    </div>
   </header>
+<!-- end top header -->
 
 
-  <div class="container-fluid d-flex flex-row mt-5" style="border: 1px solid black;">
-    <!-- News carsaoul -->
+<!-- start images carsaoul -->
+  <div class="container-fluid d-flex flex-row mt-5">
     <div id="content-box" class="col-lg-8 col-sm-12">
-      <div class="container">
-        <div id="main-slider" class="container">
+      <div class="container-fluid">
+        <div id="main-slider" class="container-fluid">
           <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active rounded-sm">
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
                 <img src="{{url_for('static', filename='img/img1.jpg')}}" width="700" height="350" alt="Los Angeles">
-              </div>
-              <div class="carousel-item">
-                <img src="{{url_for('static', filename='img/img2.jpg')}}" width="700" height="350" alt="Los Angeles">
-              </div>
-              <div class="carousel-item">
-                <img src="{{url_for('static', filename='img/img3.jpg')}}" width="700" height="350" alt="Los Angeles">
-              </div>
-              <div class="carousel-item">
-                  <img src="{{url_for('static', filename='img/img4.jpg')}}" width="700" height="350" alt="Los Angeles">
-              </div>
+                <div class="carousel-caption">
+                  <h3>Hi, this is rohit, I'm a programmer. I love to do programmin, It's kind of enjoy for me.</h3>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+  <!-- end images carasoul -->
 
 
-    <!-- Side container -->
-    <div id="side-div" class="col-lg-4 col-sm-12 rounded-lg">
-      <div class="container"><div id="side-header">Today</div>
+  <!-- Side container -->
+    <div id="side-div" class="col-lg-4 col-sm-12">
+      <h5 id="side-header">Trending</h5>
+      <div id="solid-line"></div>
+      <div class="container-fluid">
         <div class="row">
             <div class="container-fluid" id="items-div">
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
-              <h5>Hi, guys how you doing. I'm fine. whats' about you?</h5>
+              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
               <hr>
             </div>
         </div>
       </div>
     </div>
-
+    <!-- end side container -->
 
   </div>
+  
 
-<footer>
-  <div class="container-fluid">
-    <h1 class="text-center">Footer</h1>
-  </div>
-</footer>
+
 </body>
 </html>
