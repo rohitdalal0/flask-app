@@ -15,14 +15,26 @@
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"  crossorigin="anonymous">
 
-  <!-- Latest compiled and minified CSS -->
+  <!-- Latest compiled and minified CSS online -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <!-- jQuery library -->
+  <!-- jQuery library online -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- Latest compiled JavaScript -->
+  <!-- Latest compiled JavaScript online -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Offline CDN -->
+  <!-- css -->
+  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}"> -->
+  
+  <!-- Javascript -->
+  <!-- <script src="{{url_for('static', filename='css/bootstrap.min.js')}}"></script> -->
+  <!-- End  -->
+
+  <!-- Jquery libraray -->
+  <!-- <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script> -->
 
 </head>
 
@@ -65,7 +77,7 @@
 
 
 <!-- start images carsaoul -->
-  <div class="container-fluid d-flex flex-row mt-5">
+  <div class="container-fluid d-flex flex-row mt-5 bg-danger">
     <div id="content-box" class="col-lg-8 col-sm-12">
       <div class="container-fluid">
         <div id="main-slider" class="container-fluid">
@@ -86,7 +98,7 @@
 
 
   <!-- Side container -->
-    <div id="side-div" class="col-lg-4 col-sm-12">
+    <div id="side-div" class="col-lg-4 col-sm-12 float-right">
       <h5 id="side-header">Trending</h5>
       <div id="solid-line"></div>
       <div class="container-fluid">
