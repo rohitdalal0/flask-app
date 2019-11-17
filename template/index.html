@@ -39,100 +39,292 @@
 </head>
 
 <body>
-<!--  start top header -->
   <header>
-    <div class="navbar navbar-expand-md bg-info navbar-dark p-3">
-      <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='img/logo.jpg')}}" width="50" height="50"></a>
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/money">Money<a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/investment">Investment</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/bussiness">Bussiness</a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><span class="fas fa-list"></span> Category</a>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-          <li><a href="/login"><span class="fas fa-cloud"></span> Log in</a></li>
-          <li><a href="/signup"><span class="fas fa-user"></span> Sign up</a></li>
-        </ul>
-
-      </div>
-    </div>
+      <nav class="navbar navbar-expand-md text-dark">
+          <!-- Brand -->
+          <a class="navbar-brand" href="/">Bytewar</a>
+        
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon text-white"></span>
+          </button>
+        
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Money</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Life</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Signin">Sign In</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link btn btn-primary text-white" href="/Signup">Sign Up</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
   </header>
-<!-- end top header -->
+
 
 
 <!-- start images carsaoul -->
-  <div class="container-fluid d-flex flex-row mt-5 bg-danger">
+  <div class="container-fluid d-flex flex-row mt-5">
+    <!-- News carsaoul -->
     <div id="content-box" class="col-lg-8 col-sm-12">
-      <div class="container-fluid">
-        <div id="main-slider" class="container-fluid">
+      <div class="container">
+        <div id="main-slider" class="container">
           <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- The slideshow -->
-            <div class="carousel-inner rounded">
-              <div class="carousel-item active">
-                <img src="{{url_for('static', filename='img/img1.jpg')}}" width="700" height="350" alt="Los Angeles">
-                <div class="carousel-caption">
-                  <h3>Hi, this is rohit, I'm a programmer. I love to do programmin, It's kind of enjoy for me.</h3>
+            <div class="carousel-inner">
+              <div class="carousel-item active rounded">
+                <img src="{{url_for('static', filename='img/img1.jpg')}}" width="800" height="350" alt="Los Angeles">
+                <div class="caption">
+                  <h3 class="p-2">I believe that using proper HTML, 
+                      and having "good semantics" ....</h3>
+                  <h6 class="pl-2 pr-2 pb-1">IMO, you shouldn't use HTML to change the design of your pages. This is the job
+                     for CSS (There are exception of course, specially when you need 
+                     cross-browser compatibility). I believe that using proper HTML, 
+                     and having "good semantics", is more important. So I wouldn't use 
+                     hi there, todya we are going to ....</h6>
                 </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='img/img2.jpg')}}" width="800" height="350" alt="Los Angeles">
+                <div class="caption">
+                    <h3 class="p-2">I believe that using proper HTML, 
+                        and having "good semantics" ....</h3>
+                    <h6 class="pl-2 pr-2 pb-1">IMO, you shouldn't use HTML to change the design of your pages. This is the job
+                       for CSS (There are exception of course, specially when you need 
+                       cross-browser compatibility). I believe that using proper HTML, 
+                       and having "good semantics", is more important. So I wouldn't use 
+                       hi there, todya we are going to ....</h6>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='img/img3.jpg')}}" width="800" height="350" alt="Los Angeles">
+              </div>
+              <div class="carousel-item">
+                  <img src="{{url_for('static', filename='img/img4.jpg')}}" width="800" height="350" alt="Los Angeles">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <!-- end images carasoul -->
+    
 
 
-  <!-- Side container -->
-    <div id="side-div" class="col-lg-4 col-sm-12 float-right">
-      <h5 id="side-header">Trending</h5>
-      <div id="solid-line"></div>
+
+    <!-- Side container -->
+    <div id="side-div" class="col-lg-4 col-sm-12">
+      <h4>Today</h4>
+      <div id="line"></div>
       <div class="container-fluid">
-        <div class="row">
-            <div class="container-fluid" id="items-div">
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-              <h6>Hi, guys how you doing. I'm fine. whats' about you?</h6>
-              <hr>
-            </div>
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
         </div>
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
+        </div>
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="side-div" class="container-fluid pl-4 pr-4 mt-5 col-lg-12 col-sm-12">
+    <h4>Money</h4>
+    <div id="line" class="bg-info"></div>
+    <div class="container-fluid">
+      <div id="text">
+        <a href="#" class="d-flex flex-row p-2">
+          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="160" height="100">
+          <div class="p-1">
+            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
+              nderstanding.reviewed to avoid errors ......</h5>
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
+              W3Schools is optimized for learnin#side-div g,  understanding. Tutorials, references, and examples are constantly 
+              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
+              this site, you agree to have read and , cookie and privacy policy.</p>
+          </div>
+        </a>
+      </div>
+      <div id="text">
+        <a href="#" class="d-flex flex-row p-2">
+          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="160" height="100">
+          <div class="p-1">
+            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
+              nderstanding.reviewed to avoid errors ......</h5>
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
+              W3Schools is optimized for learning,  understanding. Tutorials, references, and examples are constantly 
+              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
+              this site, you agree to have read and , cookie and privacy policy.</p>
+          </div>
+        </a>
+      </div>
+      <div id="text">
+        <a href="#" class="d-flex flex-row p-2">
+          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="160" height="100">
+          <div class="p-1">
+            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
+              nderstanding.reviewed to avoid errors ......</h5>
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
+              W3Schools is optimized for learning,  understanding. Tutorials, references, and examples are constantly 
+              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
+              this site, you agree to have read and , cookie and privacy policy.</p>
+          </div>
+        </a>
+      </div>
+      <div id="text">
+        <a href="#" class="d-flex flex-row p-2">
+          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="160" height="100">
+          <div class="p-1">
+            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
+              nderstanding.reviewed to avoid errors ......</h5>
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
+              W3Schools is optimized for learning,  understanding. Tutorials, references, and examples are constantly 
+              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
+              this site, you agree to have read and , cookie and privacy policy.</p>
+          </div>
+        </a>
       </div>
     </div>
-    <!-- end side container -->
+</div>
+</div>
 
-  </div>
+
+
+<!-- =============== News gallery ====================== -->
+<div id="news-gallery" class="d-flex flex-row mt-5 pl-3 pr-3">
+  <div class="col-lg-8 col-sm-12">
+    <h4>Money</h4>
+    <div id="line" class="bg-info"></div>
+    <div class="container-fluid d-flex flex-wrap mt-4">
+      <div class="container">
+        <img src="{{url_for('static', filename='img/img2.jpg')}}" width="300" height="150">
+        <div class="bottom">
+          <p class="p-1">This text for demostration 
+            avoid errors, but we cannot warrant full correctness of all content. While using 
+             site ....
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="{{url_for('static', filename='img/img2.jpg')}}" width="300" height="150">
+        <div class="bottom">
+          <p class="p-1">This text for demostration 
+            avoid errors, but we cannot warrant full correctness of all content. While using 
+              site ....
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+          <img src="{{url_for('static', filename='img/img2.jpg')}}" width="300" height="150">
+          <div class="bottom">
+            <p class="p-1">This text for demostration 
+              avoid errors, but we cannot warrant full correctness of all content. While using 
+               site ....
+            </p>
+          </div>
+        </div>
   
+        <div class="container">
+          <img src="{{url_for('static', filename='img/img2.jpg')}}" width="300" height="150">
+          <div class="bottom">
+            <p class="p-1">This text for demostration 
+              avoid errors, but we cannot warrant full correctness of all content. While using 
+                site ....
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="{{url_for('static', filename='img/img2.jpg')}}" width="300" height="150">
+          <div class="bottom">
+            <p class="p-1">This text for demostration 
+              avoid errors, but we cannot warrant full correctness of all content. While using 
+                site ....
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+<!-- ============== End new gallery ==================== -->
 
 
+
+  <div id="side-div" class="container-fluid col-lg-4 col-sm-12">
+      <h4>Popular posts</h4>
+      <div id="line"></div>
+      <div class="container-fluid">
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
+        </div>
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
+        </div>
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
+        </div>
+        <div id="text">
+          <a href="#" class="d-flex flex-row p-2">
+            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
+            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer class="mt-5">
+  <div class="container">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+  <form action="Get-update" >
+    <input type="email" class="bg-white b-0 rounded" placeholder=" Email *" required>
+    <br><br>
+    <input type="submit" class="btn btn-info" value="Subscribe">
+  </form>
+</div>
+<div class="bg-info text-center">
+    <p><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></p>
+    <p>Created with <span class="fas fa-heart"></span> by rohit.</p>
+</div>
+</footer>
 </body>
 </html>

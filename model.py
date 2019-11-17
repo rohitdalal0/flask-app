@@ -71,6 +71,8 @@ class Signup_form(FlaskForm):
     email = StringField('Email *', validators=[input_required(), Email('Invalid email*')])
     password = PasswordField('Password *', validators=[input_required(), Length(min=8, max=20)])
 
+
+
 # admin.add_views(ModelView(Post, db.session))
 # admin.add_view(ModelView(Login, db.session))
 # admin.add_view(ModelView(Contacts, db.session))

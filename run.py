@@ -7,7 +7,7 @@ from model import *
 
 
 app = Flask(__name__, static_folder='static', template_folder='template')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://localhost:password@localhost/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://rohit:password@localhost/flask'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'SecretKey'
 
