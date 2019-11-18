@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, redirect, flash, request, fla
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_required, login_user
 from flask_bootstrap import Bootstrap
-from model import *
+
 
 
 
@@ -16,6 +16,7 @@ login_manager = LoginManager()
 bootstrap = Bootstrap(app)
 
 
+from model import *
 
 # login init
 db.init_app(app)
@@ -75,7 +76,7 @@ def login():
             return redirect(request.args.get('next'), url_for('/index'))
         else:
             flash('Email and password match not found!')
-            return render_template('login.html')
+            return render_template('login.html', login_form=login_form)
     else:
         return render_template('login.html', login_form=login_form)
 

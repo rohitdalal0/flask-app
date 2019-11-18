@@ -4,7 +4,7 @@ import datetime
 from flask_wtf import FlaskForm
 from wtforms import StringField, BooleanField, PasswordField
 from wtforms.validators import input_required, Length, Email
-from run import db
+from app import db
 
 
 date = datetime.datetime.strftime(datetime.datetime.now(), '%B %d, %Y')

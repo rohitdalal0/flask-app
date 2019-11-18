@@ -17,6 +17,10 @@
     width: 100%;
     height: 100%;
   }
+#main-slider #demo{
+    height: 450px;
+    overflow: hidden;
+}
 #main-slider #demo > .carousel-inner > div{
     position: relative;
 }
@@ -27,7 +31,7 @@
     top: 280px;
     color: white;
     left: 1px;
-    background: #1E0624;
+    background: rgba(19, 19, 19, 0.801);
 }
 
 /* <<<<<<=========== End Make the image fully responsive ==========>>>>>*/
@@ -89,12 +93,13 @@
 footer > div:nth-child(1){
     height: 200px;
 }
-footer > div:nth-child(1) > ul{
-    margin: 50px 0 0 200px;
+footer > div:nth-child(2) > ul{
+    margin-top: 100px;
+    margin-top: 50px;
     list-style: square;
 }
 footer > div:nth-child(1) > form{
-    margin: 50px 0 0 600px;
+    margin: 50px 0 0 600px
 }
 footer{
     background: #0C0C0C;

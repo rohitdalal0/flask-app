@@ -4,20 +4,20 @@
 {% with errors = get_flashed_messages() %}
 {% if errors %}
 {% for error in errors %}
-<span class="w-10 alert alert-danger" style="position: absolute;align-right;">{{error}}</span>
+<span id="notification" class="w-10 alert alert-danger" style="position: absolute; align-content:right;cursor: pointer;" onclick="$('#notification').animate('slide').hide()">{{error}}</span>
 {% endfor %}
 {% endif %}
 {% endwith %}
-<div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+<div class="container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
     <form action="/login" method="POST" role="form">
         {{ login_form.hidden_tag() }}
         {{ wtf.form_field(login_form.email) }}
         {{ wtf.form_field(login_form.password) }}
         {{ wtf.form_field(login_form.remember) }}
-       <button class="btn rounded btn-success" type="submit">Log In</button>
+    <button class="btn rounded btn-primary" type="submit">Log In</button>
         <hr>
         <a href="/forget_password" class="text-info">Forget password</a>
-        <a href="{{url_for('signup')}}" class="text-info ml-4">Sign Up</a>
+        <a href="/signup" class="text-info ml-4">Sign Up</a>
     </form>
 </div>
 {% endblock body %}
