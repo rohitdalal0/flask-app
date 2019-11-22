@@ -4,7 +4,7 @@
 {% with errors = get_flashed_messages() %}
 {% if errors %}
 {% for error in errors %}
-<span id="notification" class="w-10 alert alert-danger" style="position: absolute; align-content:right;cursor: pointer;" onclick="$('#notification').animate('slide').hide()">{{error}}</span>
+<span id="notification" class="alert w-10 h-10 alert-danger" style="position: absolute;cursor: pointer;" onclick="$('#notification').fadeToggle(400)">{{error}}</span>
 {% endfor %}
 {% endif %}
 {% endwith %}

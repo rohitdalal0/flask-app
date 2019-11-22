@@ -5,12 +5,15 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="A Hacker">
+  <meta name="rohit" content="">
 
   <title>Bytewar</title>
 
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/index.css') }}">
+
+  <!-- js -->
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
 
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"  crossorigin="anonymous">
@@ -29,7 +32,7 @@
 
 <body>
   <header>
-      <nav class="navbar navbar-expand-md navbar-primary text-dark">
+      <nav class="navbar navbar-expand-md navbar-dark text-white">
           <!-- Brand -->
           <a class="navbar-brand text-primary" href="/">Bytewar</a>
         
@@ -50,12 +53,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="/investment">Investment</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link btn btn-success text-white m-1" href="/login">Log In</a>
+              <li class="nav-item mr-1 ml-1">
+                <a class="nav-link btn btn-success text-white" href="/login">Log In</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link btn btn-primary text-white m-1" href="/signup">Sign Up</a>
-                </li>
+              <li class="nav-item mr-1 ml-1">
+                  <a class="nav-link btn btn-primary text-white" href="/signup">Sign Up</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -75,8 +78,8 @@
               <div class="carousel-item active rounded">
                 <img src="{{url_for('static', filename='img/img10.jpg')}}" width="800" height="350" alt="Los Angeles">
                 <div class="caption">
-                  <h3 class="p-2">I believe that using proper HTML, 
-                      and having "good semantics" ....</h3>
+                  <h3 class="p-2"><a href="/post">I believe that using proper HTML, 
+                      and having "good semantics" ....</a></h3>
                   <h6 class="pl-2 pr-2 pb-1">IMO, you shouldn't use HTML to change the design of your pages. This is the job
                      for CSS (There are exception of course, specially when you need 
                      cross-browser compatibility). I believe that using proper HTML, 
@@ -87,8 +90,8 @@
               <div class="carousel-item">
                 <img src="{{url_for('static', filename='img/img2.jpg')}}" width="800" height="350" alt="Los Angeles">
                 <div class="caption">
-                    <h3 class="p-2">I believe that using proper HTML, 
-                        and having "good semantics" ....</h3>
+                    <h3 class="p-2"><a href="/post">I believe that using proper HTML, 
+                      and having "good semantics" ....</a></h3>
                     <h6 class="pl-2 pr-2 pb-1">IMO, you shouldn't use HTML to change the design of your pages. This is the job
                        for CSS (There are exception of course, specially when you need 
                        cross-browser compatibility). I believe that using proper HTML, 
@@ -112,106 +115,186 @@
 
 
     <!-- Side container -->
-    <div id="side-div" class="col-lg-4 col-sm-12">
-      <h4>Today</h4>
-      <div id="line"></div>
+    <div class="col-lg-4 col-sm-12 side-div">
+      <h4 class="bg-primary">Trending</h4>
+      <hr class="mt-0 bg-primary h-5">
       <div class="container-fluid">
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img10.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
+        <div id="text" class="row mt-2">
+          <div class="col-lg-4 col-sm-12">
+            <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+          </div>
         </div>
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img8.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
+        <hr>
+        <div id="text" class="row">
+          <div class="col-lg-4 col-sm-12">
+            <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+          </div>
         </div>
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img6.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
+        <hr/>
+        <div id="text" class="row">
+          <div class="col-lg-4 col-sm-12">
+            <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+          </div>
         </div>
+        <hr/>
+        <div id="text" class="row">
+          <div class="col-lg-4 col-sm-12">
+            <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+          </div>
+        </div>
+        <hr/>
+        <div id="text" class="row">
+          <div class="col-lg-4 col-sm-12">
+            <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+          </div>
+        </div>
+        <hr/>
     </div>
   </div>
 </div>
 
-<div id="side-div" class="container-fluid pl-4 pr-4 mt-5 col-lg-12 col-sm-12">
-    <h4>Money</h4>
-    <div id="line" class="bg-info"></div>
-    <div class="container-fluid">
-      <div id="text">
-        <a href="#" class="d-flex flex-row p-2">
-          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img9.jpg') }}" width="160" height="100">
-          <div class="p-1">
-            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
-              nderstanding.reviewed to avoid errors ......</h5>
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
-              W3Schools is optimized for learnin#side-div g,  understanding. Tutorials, references, and examples are constantly 
-              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
-              this site, you agree to have read and , cookie and privacy policy.</p>
+
+<!-- Start sub-menu ========================================== -->
+<div class="d-flex flex-row mt-5">
+    <div class="col-lg-6 col-sm-12">
+      <div class="col-lg-12 col-sm-12 side-div">
+        <h4 class="bg-primary">Money</h4>
+        <hr class="mt-0 bg-primary h-5">
+        <div class="container-fluid">
+          <div id="text" class="row mt-2">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
           </div>
-        </a>
+          <hr>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+        </div>
       </div>
-      <div id="text">
-        <a href="#" class="d-flex flex-row p-2">
-          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img2.jpg') }}" width="160" height="100">
-          <div class="p-1">
-            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
-              nderstanding.reviewed to avoid errors ......</h5>
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
-              W3Schools is optimized for learning,  understanding. Tutorials, references, and examples are constantly 
-              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
-              this site, you agree to have read and , cookie and privacy policy.</p>
+    </div>
+
+
+    <div class="col-lg-6 col-sm-12">
+        <div class="col-lg-12 col-sm-12 side-div">
+        <h4 class="bg-primary">Business</h4>
+        <hr class="mt-0 bg-primary h-5">
+        <div class="container-fluid">
+          <div id="text" class="row mt-2">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
           </div>
-        </a>
-      </div>
-      <div id="text">
-        <a href="#" class="d-flex flex-row p-2">
-          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="160" height="100">
-          <div class="p-1">
-            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
-              nderstanding.reviewed to avoid errors ......</h5>
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
-              W3Schools is optimized for learning,  understanding. Tutorials, references, and examples are constantly 
-              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
-              this site, you agree to have read and , cookie and privacy policy.</p>
+          <hr>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
           </div>
-        </a>
-      </div>
-      <div id="text">
-        <a href="#" class="d-flex flex-row p-2">
-          <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img4.jpg') }}" width="160" height="100">
-          <div class="p-1">
-            <h5>we cannot warrant full correctness of all content. While using this site, you agree to have 
-              nderstanding.reviewed to avoid errors ......</h5>
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,
-              W3Schools is optimized for learning,  understanding. Tutorials, references, and examples are constantly 
-              reviewed to avoid errors, but we cannot warrant full correctness of all content. While using 
-              this site, you agree to have read and , cookie and privacy policy.</p>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
           </div>
-        </a>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+        </div>
       </div>
     </div>
 </div>
-</div>
-
+<!-- End sub-menu ========================================== -->
 
 
 <!-- =============== News gallery ====================== -->
 <div id="news-gallery" class="d-flex flex-row mt-5 pl-3 pr-3">
   <div class="col-lg-8 col-sm-12">
-    <h4>Money</h4>
-    <div id="line" class="bg-info"></div>
+    <h4 class="bg-primary">Investment</h4>
+    <hr class="mt-0 bg-primary h-5">
     <div class="container-fluid d-flex flex-wrap mt-4">
       <div class="container">
         <img src="{{url_for('static', filename='img/img6.jpg')}}" width="300" height="150">
         <div class="bottom">
-          <p class="p-1">This text for demostration 
+          <p class="p-1"><a href="/post">This text for demostration 
             avoid errors, but we cannot warrant full correctness of all content. While using 
-             site ....
+             site....</a>
           </p>
         </div>
       </div>
@@ -219,9 +302,9 @@
       <div class="container">
         <img src="{{url_for('static', filename='img/img7.jpg')}}" width="300" height="150">
         <div class="bottom">
-          <p class="p-1">This text for demostration 
+          <p class="p-1"><a href="/post">This text for demostration 
             avoid errors, but we cannot warrant full correctness of all content. While using 
-              site ....
+              site....</a>
           </p>
         </div>
       </div>
@@ -229,9 +312,9 @@
       <div class="container">
           <img src="{{url_for('static', filename='img/img8.jpg')}}" width="300" height="150">
           <div class="bottom">
-            <p class="p-1">This text for demostration 
+            <p class="p-1"><a href="/post">This text for demostration 
               avoid errors, but we cannot warrant full correctness of all content. While using 
-               site ....
+               site.... </a>
             </p>
           </div>
         </div>
@@ -239,9 +322,10 @@
         <div class="container">
           <img src="{{url_for('static', filename='img/img9.jpg')}}" width="300" height="150">
           <div class="bottom">
-            <p class="p-1">This text for demostration 
+            <p class="p-1"><a href="/post">This text for demostration 
               avoid errors, but we cannot warrant full correctness of all content. While using 
-                site ....
+               site.... </a>
+            </p>
             </p>
           </div>
         </div>
@@ -249,9 +333,9 @@
         <div class="container">
           <img src="{{url_for('static', filename='img/img10.jpg')}}" width="300" height="150">
           <div class="bottom">
-            <p class="p-1">This text for demostration 
+            <p class="p-1"><a href="/post">This text for demostration 
               avoid errors, but we cannot warrant full correctness of all content. While using 
-                site ....
+               site.... </a>
             </p>
           </div>
         </div>
@@ -261,56 +345,80 @@
 
 
 
-  <div id="side-div" class="container-fluid col-lg-4 col-sm-12">
-      <h4>Popular posts</h4>
-      <div id="line"></div>
-      <div class="container-fluid">
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img3.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
-        </div>
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img4.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
-        </div>
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img5.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
-        </div>
-        <div id="text">
-          <a href="#" class="d-flex flex-row p-2">
-            <img class="mt-2 mr-2" src="{{url_for('static', filename='img/img6.jpg') }}" width="90" height="60">
-            <p>Examples might be simplified to improve reading and basic understanding. Tutorials, references,</p>
-          </a>
-        </div>
+<div class="col-lg-4 col-sm-12 side-div">
+  <h4 class="bg-primary">Today</h4>
+  <hr class="mt-0 bg-primary h-5">
+  <div class="container-fluid">
+    <div id="text" class="row mt-2">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
     </div>
-  </div>
+    <hr>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img1.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img9.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img8.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img7.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+</div>
+</div>
 </div>
 
 
-
-
-
 <footer class="mt-5">
-  <div class="container d-flex flex-row">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About Us</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <form action="Get-update">
+  <div class="container-fluid d-flex flex-row">
+    <div class="container-fluid d-flex flex-column">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <ul>
+        <li><a href="#"><span class="fab fa-github"></span></a></li>
+        <li class="ml-3"><a href="#"><span class="fab fa-instagram"></span></a></li>
+      </ul>
+    </div>
+  <form action="/subscribe">
     <input type="email" class="bg-white b-0 rounded" placeholder=" Email *" required>
     <br><br>
     <input type="submit" class="btn btn-info" value="Subscribe">
   </form>
 </div>
-<div class="bg-info text-center">
+<div class="container-fluid bg-info text-center">
     <p><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></p>
     <p>Created with <span class="fas fa-heart"></span> by rohit.</p>
 </div>

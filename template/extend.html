@@ -5,12 +5,15 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="rohit">
+  <meta name="description" content="A Hacker">
+  <meta name="rohit" content="">
 
   <title>Bytewar</title>
 
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/index.css') }}">
+
+  <!-- js -->
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
 
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"  crossorigin="anonymous">
@@ -24,40 +27,41 @@
   <!-- Latest compiled JavaScript online -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-primary text-white">
-        <!-- Brand -->
-        <a class="navbar-brand" href="/">Bytewar</a>
-      
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon text-white"></span>
-        </button>
-      
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Business</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Money</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Life</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Log In</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn btn-primary text-white" href="/Signup">Sign Up</a>
+      <nav class="navbar navbar-expand-md navbar-dark text-white">
+          <!-- Brand -->
+          <a class="navbar-brand text-primary" href="/">Bytewar</a>
+        
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon text-white"></span>
+          </button>
+        
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="/business">Business</a>
               </li>
-          </ul>
-        </div>
-      </nav>
+              <li class="nav-item">
+                <a class="nav-link" href="/money">Money</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/investment">Investment</a>
+              </li>
+              <li class="nav-item mr-1 ml-1">
+                <a class="nav-link btn btn-success text-white" href="/login">Log In</a>
+              </li>
+              <li class="nav-item mr-1 ml-1">
+                  <a class="nav-link btn btn-primary text-white" href="/signup">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
   </header>
 
 {% block body %}
@@ -65,22 +69,28 @@
 
 
 <footer class="mt-5">
-  <div class="container d-flex flex-row">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About Us</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <form action="Get-update">
-    <input type="email" class="bg-white b-0 rounded" placeholder=" Email *" required>
-    <br><br>
-    <input type="submit" class="btn btn-info" value="Subscribe">
-  </form>
-</div>
-<div class="bg-info text-center">
-    <p><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></p>
-    <p>Created with <span class="fas fa-heart"></span> by rohit.</p>
-</div>
-</footer>
-</body>
-</html>
+    <div class="container-fluid d-flex flex-row">
+      <div class="container-fluid d-flex flex-column">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"><span class="fab fa-github"></span></a></li>
+          <li class="ml-3"><a href="#"><span class="fab fa-instagram"></span></a></li>
+        </ul>
+      </div>
+    <form action="/subscribe">
+      <input type="email" class="bg-white b-0 rounded" placeholder=" Email *" required>
+      <br><br>
+      <input type="submit" class="btn btn-info" value="Subscribe">
+    </form>
+  </div>
+  <div class="container-fluid bg-info text-center">
+      <p><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></p>
+      <p>Created with <span class="fas fa-heart"></span> by rohit.</p>
+  </div>
+  </footer>
+  </body>
+  </html>

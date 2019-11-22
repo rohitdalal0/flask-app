@@ -1,21 +1,69 @@
 /* <<<<<============== Navbar ==================>>>> */
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .navbar{
     border-bottom: .5px solid rgba(53, 53, 53, 0.637);
     background: rgb(12, 12, 12);
 }
-.navbar{
-    position: sticky;
-    top: 0;
-    left: 0;
-}
 /* <<<<<============== End Navbar ==================>>>> */
 
+/* ================== Side divs overflow control ================ */
+/* 1 */
 
+body > div.container-fluid.d-flex.flex-row.mt-5 > div.col-lg-4.col-sm-12.side-div > div.container-fluid{
+    height: 450px;
+    overflow-y: scroll;
+}
+body > div.container-fluid.d-flex.flex-row.mt-5 > div.col-lg-4.col-sm-12.side-div > h4{
+    padding: 7px 7px;
+    width: 110px;
+    margin-bottom: 0%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+body > div.container-fluid.d-flex.flex-row.mt-5 > div.col-lg-4.col-sm-12.side-div > hr{
+    height: 4px;
+}
+
+/* 2 */
+#news-gallery > div.col-lg-4.col-sm-12.side-div h4{
+    padding: 7px 7px;
+    width: 80px;
+    margin-bottom: 0%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#news-gallery > div.col-lg-4.col-sm-12.side-div hr{
+    height: 4px;
+}
+/* ================== End overflow control ================ */
+
+/* ================== Two div without overflow control ================ */
+body > div:nth-child(3) > div:nth-child(1) > div h4{
+    padding: 7px 7px;
+    width: 90px;
+    margin-bottom: 0%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+body > div:nth-child(3) > div:nth-child(2) > div h4{
+    padding: 7px 7px;
+    width: 110px;
+    margin-bottom: 0%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+body > div:nth-child(3) > div > div hr{
+    height: 4px;
+}
+/* ================== End Two div without overflow control ================ */
 
 /* <<<<<<=========== Make the image fully responsive ==========>>>>>*/
 .carousel-inner img {
     width: 100%;
     height: 100%;
+    border-radius: 3px;
   }
 #main-slider #demo{
     height: 450px;
@@ -30,7 +78,9 @@
     height: 180px;
     top: 280px;
     color: white;
-    left: 1px;
+    left: 0px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
     background: rgba(19, 19, 19, 0.801);
 }
 
@@ -39,33 +89,27 @@
 
 /* <<<<<============== sub-menu ==================>>>> */
 #line{
-    background: #048bda;
+    background: #048BDA;
     width: 100%;
     height: 10px;
 }
-#side-div .container-fluid{
-    height: 400px;
-    overflow: auto;
-    box-shadow: 0px 10px 14px -12px rgba(0,0,0,0.75);
-    padding: 10px 0px;
-}
 
-#side-div .container-fluid #text a p{
-    color: #212529;
-    padding: 5px;
-    font-size: 13px;
-}
-#side-div .container-fluid #text a{
-    text-decoration: none;
-}
-#side-div .container-fluid #text:hover{
-    background-color: rgb(216, 216, 216);
-    cursor: pointer;
-}
 /* <<<<<============== End sub-menu ==================>>>> */
 
 
 /* <<<<<============== start Gallery ==============>>>>> */
+/* start Header */
+#news-gallery > div.col-lg-8.col-sm-12 h4{
+    padding: 7px 7px;
+    width: 140px;
+    margin-bottom: 0%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#news-gallery > div.col-lg-8.col-sm-12 hr{
+    height: 4px;
+}
+/* End Header */
 #news-gallery > div:nth-child(1){
     width: 75%;
 }
@@ -93,15 +137,40 @@
 footer > div:nth-child(1){
     height: 200px;
 }
-footer > div:nth-child(2) > ul{
-    margin-top: 100px;
-    margin-top: 50px;
-    list-style: square;
+body > footer > div > div.container-fluid.d-flex.flex-column > ul:nth-child(1){
+    margin-top: 30px;
+    list-style: none;
+    height: 45px;
+    display: flex;
 }
-footer > div:nth-child(1) > form{
-    margin: 50px 0 0 600px
+body > footer > div.container-fluid.d-flex.flex-row > div > ul:nth-child(1) > li a{
+    padding: 10px 30px;
+}
+body > footer > div.container-fluid.d-flex.flex-row > div > ul:nth-child(1) li:hover a{
+    color: white;
+    background-color: #17A2B8;
+}
+/* second ul */
+body > footer > div > div.container-fluid.d-flex.flex-column > ul:nth-child(2){
+    list-style: none;
+    height: 45px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 110px;
+}
+body > footer > div.container-fluid.d-flex.flex-row > div > ul:nth-child(2) li a span{
+    font-size: 30px;
+    color: rgb(185, 185, 185);
+}
+body > footer > div.container-fluid.d-flex.flex-row > div > ul:nth-child(2) li a span:hover{
+    color: rgb(201, 36, 6);
+}
+/* end second ul */
+body > footer > div.container-fluid.d-flex.flex-row > form{
+    margin: 50px 0 0 500px
 }
 footer{
     background: #0C0C0C;
 }
 /* <<<<<============== End footer ==============>>>>> */
+
