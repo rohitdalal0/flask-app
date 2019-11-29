@@ -2,12 +2,14 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 {% block body %}
 <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
-    {{ Signup_form.hidden_tag() }}
-    {{ wtf.form_field(Signup_form.username) }}
-    {{ wtf.form_field(Signup_form.email) }}
-    {{ wtf.form_field(Signup_form.password) }}
-    <button class="btn btn-primary rounded">Sign Up</button>
-    <hr>
-    <a href="/login" class="text-info ml-4">Log In</a>
+    <form action="/signup">
+        {{ Signup_form.hidden_tag() }}
+        {{ wtf.form_field(Signup_form.username) }}
+        {{ wtf.form_field(Signup_form.email) }}
+        {{ wtf.form_field(Signup_form.password) }}
+        <button class="btn btn-primary rounded">Sign Up</button>
+        <hr>
+        <a href="/login" class="text-info ml-4">Log In</a>
+    </form>
 </div>
 {% endblock body %}

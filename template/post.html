@@ -1,25 +1,446 @@
-{% extends 'extend.html' %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Post Content -->
-{% for post in posts %}
-<article>
-  <div class="container mt-5 w-auto text-dark rounded">
-    <div class="container text-center">
-      {% with img='img/'+post.url %}
-      <div class="flex-row">
-        <h1 class="col-sm-4 col-lg-12 pt-3 align-self-sm-center" style="color: tomato;">{{post.title}}</h1>
-        <hr>
-        <div class="col-sm-4 col-lg-12"><img src="{{url_for('static',filename=img)}}" class="pb-3 pr-4" width="300" height="200">
-          <div class="col-sm-4 col-lg-12 pb-4 overflow-hidden">{{post.post}}</div>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="A Hacker">
+  <meta name="rohit" content="">
+
+  <title>Bytewar</title>
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/index.css') }}">
+
+  <!-- js -->
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"  crossorigin="anonymous">
+
+  <!-- Latest compiled and minified CSS online -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery library online -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript online -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+      <nav class="navbar navbar-expand-md navbar-dark text-white">
+          <!-- Brand -->
+          <a class="navbar-brand text-primary" href="/">Bytewar</a>
+        
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon text-white"></span>
+          </button>
+        
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="/business">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/money">Money</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/investment">Investment</a>
+              </li>
+              <li class="nav-item mr-1 ml-1">
+                <a class="nav-link btn btn-success text-white" href="/login">Log In</a>
+              </li>
+              <li class="nav-item mr-1 ml-1">
+                  <a class="nav-link btn btn-primary text-white" href="/signup">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  </header>
+
+
+
+<!-- serve content -->
+<div class="container-fluid mt-5 d-flex flex-row flex-wrap">
+  <div class="container-fluid flex-wrap col-lg-8 col-sm-12">
+    <h1>Hi there, How you doing?</h1>
+    <hr>
+    <img src="{{url_for('static',filename='img/img5.jpg')}}" class="mt-4 text-center mb-5 w-70" alt="A tree in the grass" width="500" height="300">
+
+    <div class="mb-3">social media icons</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo id rem officiis
+      autem veniam voluptatum eum corporis deserunt hic ratione similique quam, fugiat 
+      tempore sapiente delectus distinctio non nobis.Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Aperiam nemo id rem officiis autem veniam voluptatum eum corporis 
+      deserunt hic ratione similique quam, fugiattempore sapiente delectus distinctio non
+        nobi.
+    </p>
+  </div>
+  <div class="col-lg-4 col-sm-12 side-div flex-wrap">
+    <h4 class="bg-primary">Related</h4>
+    <hr class="mt-0 bg-primary h-5">
+    <ul>
+      <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, adipisci autem. Similique sunt cupiditate eos ex, vitae veniam cum, asperiores autem, odit atque assumenda illum eligendi quam minima sint quidem.</a></li>
+      <hr>
+      <li><a href="#">Odio, alias optio quia, beatae aspernatur necessitatibus molestiae sit obcaecati eligendi culpa minima. Minima, repellendus nulla, unde quod quam a dolorem eius culpa explicabo sequi minus saepe eveniet harum doloremque.</a></li>
+      <hr>
+      <li><a href="#">Tempore eos reiciendis, vero minus commodi voluptates eius aliquam accusantium! Aut quaerat nemo odit nam explicabo dignissimos. Assumenda doloribus, exercitationem quidem laborum aperiam repudiandae at temporibus, ullam expedita, quisquam reiciendis.</a></li>
+      <hr>
+      <li><a href="#">Beatae consectetur inventore tempora veniam eveniet, impedit ipsam quas cupiditate suscipit illum modi exercitationem aspernatur, quam distinctio vero cum blanditiis molestias hic maiores voluptas ad ut! Fuga, vel? Ducimus, vero.</a></li>
+      <hr>
+      <li><a href="#">Dolorem fuga dignissimos fugit sunt repudiandae earum nisi assumenda dolores? Eaque nostrum illo assumenda autem facere, expedita laborum nam debitis dicta id, excepturi sed, blanditiis alias eligendi reiciendis harum rem!</a></li>
+      <hr>
+      <li><a href="#">Quia beatae alias dolorum. Enim hic, modi corrupti at labore iusto, assumenda laudantium illum recusandae officiis atque ducimus pariatur quae possimus aliquid repudiandae sint optio, corporis consequatur rem! Ea, magni.</a></li>
+      <hr>
+      <li><a href="#">Eaque deserunt animi eos ad placeat tenetur illum alias modi nostrum assumenda dolores, fugit saepe nam mollitia, provident debitis ullam! Excepturi porro fuga nostrum unde tenetur reiciendis maiores vel nulla?</a></li>
+      <hr>
+      <li><a href="#">Dicta, ad? Iste nisi vel et voluptatem quam voluptas adipisci, eum, voluptate expedita aperiam dolore, earum laboriosam labore hic reiciendis distinctio. Repudiandae tempora est suscipit sequi perferendis animi consectetur dicta?</a></li>
+      <hr>
+    </ul>
+  </div>
+  </div>
+  
+
+
+<!-- Start sub-menu ========================================== -->
+<div class="d-flex flex-row mt-5 flex-wrap">
+    <div class="col-lg-6 col-sm-12">
+      <div class="col-lg-12 col-sm-12 side-div">
+        <h4 class="bg-primary">Money</h4>
+        <hr class="mt-0 bg-primary h-5">
+        <div class="container-fluid">
+          <div id="text" class="row mt-2 flex-wrap">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
         </div>
-        <!-- <div class="col-lg-12 col-sm-4 w-auto">{{post.post}}</div> -->
       </div>
-      {% endwith %}
+    </div>
+
+
+    <div class="col-lg-6 col-sm-12 flex-wrap">
+        <div class="col-lg-12 col-sm-12 side-div">
+        <h4 class="bg-primary">Business</h4>
+        <hr class="mt-0 bg-primary h-5">
+        <div class="container-fluid">
+          <div id="text" class="row mt-2">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+          <div id="text" class="row">
+            <div class="col-lg-4 col-sm-12">
+              <img src="{{url_for('static', filename='img/img10.jpg') }}" width="150" height="80">
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+            </div>
+          </div>
+          <hr/>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- End sub-menu ========================================== -->
+
+
+<!-- =============== News gallery ====================== -->
+<div id="news-gallery" class="d-flex flex-row mt-5 pl-3 pr-3 flex-wrap">
+  <div class="col-lg-8 col-sm-12">
+    <h4 class="bg-primary">Investment</h4>
+    <hr class="mt-0 bg-primary h-5">
+    <div class="container-fluid d-flex flex-wrap mt-4">
+      <div class="container">
+        <img src="{{url_for('static', filename='img/img6.jpg')}}" width="300" height="150">
+        <div class="bottom">
+          <p class="p-1"><a href="/post">This text for demostration 
+            avoid errors, but we cannot warrant full correctness of all content. While using 
+             site....</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="{{url_for('static', filename='img/img7.jpg')}}" width="300" height="150">
+        <div class="bottom">
+          <p class="p-1"><a href="/post">This text for demostration 
+            avoid errors, but we cannot warrant full correctness of all content. While using 
+              site....</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+          <img src="{{url_for('static', filename='img/img8.jpg')}}" width="300" height="150">
+          <div class="bottom">
+            <p class="p-1"><a href="/post">This text for demostration 
+              avoid errors, but we cannot warrant full correctness of all content. While using 
+               site.... </a>
+            </p>
+          </div>
+        </div>
+  
+        <div class="container">
+          <img src="{{url_for('static', filename='img/img9.jpg')}}" width="300" height="150">
+          <div class="bottom">
+            <p class="p-1"><a href="/post">This text for demostration 
+              avoid errors, but we cannot warrant full correctness of all content. While using 
+               site.... </a>
+            </p>
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="{{url_for('static', filename='img/img10.jpg')}}" width="300" height="150">
+          <div class="bottom">
+            <p class="p-1"><a href="/post">This text for demostration 
+              avoid errors, but we cannot warrant full correctness of all content. While using 
+               site.... </a>
+            </p>
+          </div>
+        </div>
     </div>
   </div>
+<!-- ============== End new gallery ==================== -->
 
-</article>
 
-{% endfor %}
-{% endblock body %}
+
+<div class="col-lg-4 col-sm-12 side-div flex-wrap">
+  <h4 class="bg-primary">Today</h4>
+  <hr class="mt-0 bg-primary h-5">
+  <div class="container-fluid">
+    <div id="text" class="row mt-2">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img10.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img1.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img9.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img8.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+    <div id="text" class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img src="{{url_for('static', filename='img/img7.jpg') }}" width="120" height="80">
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <a href="/post">Examples might be simplified to improve reading and basic understanding. Tutorials, ...</a>
+      </div>
+    </div>
+    <hr/>
+</div>
+</div>
+</div>
+
+
+<footer class="mt-5 flex-wrap text-center">
+  <div class="container-fluid d-flex flex-row flex-wrap">
+    <div class="container-fluid d-flex flex-column">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <ul>
+        <li><a href="#"><span class="fab fa-github"></span></a></li>
+        <li class="ml-3"><a href="#"><span class="fab fa-instagram"></span></a></li>
+      </ul>
+    </div>
+</div>
+<div class="container-fluid bg-info">
+    <p><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></p>
+    <p>Created with <span class="fas fa-heart"></span> by rohit.</p>
+</div>
+</footer>
+</body>
+</html>

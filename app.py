@@ -28,7 +28,7 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def user_loader(user_id):
-    return Login.query.get(user_id)
+    return Login.qqueryuery.get(user_id)
 
 
 
