@@ -13,10 +13,10 @@ date = datetime.datetime.strftime(datetime.datetime.now(), '%B %d, %Y')
 class Contacts(db.Model):
     __tablename__ = 'contacts'
     id = db.Column('No', db.Integer, primary_key=True)
-    name = db.Column('Name', db.String(15), nullable=True)
-    email = db.Column('Email', db.String(20), nullable=True)
+    name = db.Column('Name', db.String(50), nullable=True)
+    email = db.Column('Email', db.String(50), nullable=True)
     phone = db.Column('Phone', db.String(15), nullable=True)
-    message = db.Column('Message', db.String(100))
+    message = db.Column('Message', db.Text)
     date = db.Column('Date', db.VARCHAR(20), default=date)
 
     def __repr__(self):
@@ -27,10 +27,11 @@ class Contacts(db.Model):
 class Post(db.Model):
     __tablename__ = 'post'
     id = db.Column('No', db.Integer, primary_key=True)
-    title = db.Column('Title', db.String(100), nullable=False)
-    post = db.Column('Post', db.String(1000), nullable=False)
-    tag = db.Column('Tag', db.String(200), nullable=False)
-    url = db.Column('Url', db.String(500), nullable=False)
+    title = db.Column('Title', db.Text, nullable=False)
+    body = db.Column('Body', db.Text, nullable=False)
+    tag = db.Column('Tag', db.Text, nullable=False)
+    like = db.Column('Like', db.Text, nullable=True)
+    url = db.Column('Url', db.Text, nullable=False)
     date = db.Column('Date', db.String(20), nullable=False, default=date)
 
     def __repr__(self):
@@ -72,7 +73,7 @@ class Signup_form(FlaskForm):
     password = PasswordField('Password *', validators=[input_required(), Length(min=8, max=20)])
 
 
-
+db.create_all()
 # admin.add_views(ModelView(Post, db.session))
 # admin.add_view(ModelView(Login, db.session))
 # admin.add_view(ModelView(Contacts, db.session))

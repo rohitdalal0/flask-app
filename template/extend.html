@@ -68,29 +68,19 @@
 {% endblock %}
 
 
-<footer class="mt-5">
-    <div class="container-fluid d-flex flex-row">
-      <div class="container-fluid d-flex flex-column">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-        <ul>
-          <li><a href="#"><span class="fab fa-github"></span></a></li>
-          <li class="ml-3"><a href="#"><span class="fab fa-instagram"></span></a></li>
-        </ul>
-      </div>
-    <form action="/subscribe">
-      <input type="email" class="bg-white b-0 rounded" placeholder=" Email *" required>
-      <br><br>
-      <input type="submit" class="btn btn-info" value="Subscribe">
-    </form>
-  </div>
-  <div class="container-fluid bg-info text-center">
-      <p><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></p>
-      <p>Created with <span class="fas fa-heart"></span> by rohit.</p>
-  </div>
-  </footer>
-  </body>
-  </html>
+<footer class="container-fluid mt-5 flex-wrap text-center">
+  <div class="container-fluid d-flex flex-column flex-wrap w-100">
+    <ul class="h-10 display-flex">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="www.github.com/rohit-linux" target="_blank"><span class="fab fa-github"></span></a></li>
+      <li><a href="www.instagram.com/rohit_dalal__" target="_blank"><span class="fab fa-instagram"></span></a></li>
+    </ul>
+</div>
+<hr class="bg-dark">
+<div class="text-dark text-center"><span class="fas fa-copyright"> Bytewar 2019 - All rights reserved</span></div>
+<div class="text-dark text-center">Created with <span class="fas fa-heart"></span> by rohit.</div>
+</footer>
+</body>
+</html>

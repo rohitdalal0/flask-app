@@ -12,6 +12,25 @@
 
 /* ================== Side divs overflow control ================ */
 /* 1 */
+#demo > ul{
+    display: none;
+}
+#demo div.carousel-inner > div.carousel-item > div.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.815);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100px;
+
+    word-wrap: break-word;
+}
+#demo div.carousel-inner > div.carousel-item > div.carousel-caption a{
+    color: rgb(209, 209, 209);
+}
+#demo div.carousel-inner > div.carousel-item > div.carousel-caption a h3{
+    color: rgb(209, 209, 209);
+    padding: 1px;
+}
 
 body > div.container-fluid.d-flex.flex-row.mt-5 > div.col-lg-4.col-sm-12.side-div > div.container-fluid{
     height: 450px;
@@ -60,30 +79,20 @@ body > div:nth-child(3) > div > div hr{
     height: 4px;
 }
 /* ================== End Two div without overflow control ================ */
-
+/* START IMAGE CROUSEL BESIDE DIV */
+#text > div.col-lg-4.col-sm-12 > img{
+    min-width: 120px;
+    min-height: 80px;
+}
+#text > div.col-lg-8.col-sm-12 > a{
+    word-wrap: break-word;
+}
+/* END IAMGE CAROUSEL BESIDE DIV */
 /* <<<<<<=========== Make the image fully responsive ==========>>>>>*/
-.carousel-inner img {
+#demo div.carousel-inner img {
     width: 100%;
-    height: 100%;
+    height: 500px;
     border-radius: 3px;
-  }
-#main-slider #demo{
-    height: 450px;
-    overflow: hidden;
-}
-#main-slider #demo > div.carousel-inner > div.carousel-item{
-    position: relative;
-}
-#main-slider #demo > div.carousel-inner > div .caption{
-    position: absolute;
-    width: 100%;
-    height: 180px;
-    top: 280px;
-    color: white;
-    left: 0px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    background: rgba(19, 19, 19, 0.801);
 }
 
 /* <<<<<<=========== End Make the image fully responsive ==========>>>>>*/
@@ -95,7 +104,6 @@ body > div:nth-child(3) > div > div hr{
     width: 100%;
     height: 10px;
 }
-
 /* <<<<<============== End sub-menu ==================>>>> */
 
 
@@ -143,9 +151,8 @@ body > div:nth-child(3) > div > div hr{
 footer{
     background: #0C0C0C;
 }
-}
 body > footer > div.container-fluid.d-flex.flex-column.flex-wrap.w-100 ul{
-    margin-top: 5%;
+    margin-top: 3%;
 }
 body > footer > div.container-fluid.d-flex.flex-column.flex-wrap.w-100 > ul > li{
     list-style: none;
@@ -157,12 +164,43 @@ body > footer > div.container-fluid.d-flex.flex-column.flex-wrap.w-100 > ul > li
 body > div.container-fluid.mt-5.d-flex.flex-row.flex-wrap > div.col-lg-4.col-sm-12.side-div.flex-wrap ul{
     list-style: square;
 }
-
+body > div.container-fluid.mt-5.d-flex.flex-row.flex-wrap > div.container.flex-wrap.col-lg-7.col-sm-12 > img{
+    width: 100%;
+    max-height: 500px;
+}
 /* End Page 'post.html' */
 
 
 
 @media only screen and (max-width: 768px) {
+    #demo div.carousel-inner img{
+        height: 200px;
+    }
+    #demo div.carousel-inner > div.carousel-item > div.carousel-caption{
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+        max-height: 100px;
+        word-wrap: break-word;
+    }
+
+    #demo > ul{
+        display: none;
+    }
+    #demo div.carousel-inner > div.carousel-item > div.carousel-caption{
+        background-color: #000000c9;
+
+    }
+    #demo div.carousel-inner > div.carousel-item > div.carousel-caption a{
+        color: rgb(209, 209, 209);
+    }
+    #demo div.carousel-inner > div.carousel-item > div.carousel-caption a h3{
+        font-size: 17px;
+        color: rgb(209, 209, 209);
+        padding: 1px;
+    }
+
+
     #news-gallery > div.col-lg-8.col-sm-12 > div > div > img{
         width: 100%;
         max-height: 300px;
@@ -211,21 +249,11 @@ body > div.container-fluid.mt-5.d-flex.flex-row.flex-wrap > div.col-lg-4.col-sm-
         width: 100%;
         max-height: 400px;
     }
-    /* Start carousel caption */
-    #main-slider #demo > div.carousel-inner > div .caption{
+
+    /* Start page 'post.html' */
+    body > div.container-fluid.mt-5.d-flex.flex-row.flex-wrap > div.container.flex-wrap.col-lg-7.col-sm-12 > img{
         width: 100%;
-        top: 100px;
-        left: 0;
+        max-height: 300px;
     }
-    #main-slider #demo > div.carousel-inner > div .caption > h3{
-        font-size: 19px;
-    }
-    #demo > div.carousel-inner > div.carousel-item > div > h6{
-        display: none;
-    }
-    #demo, #demo > div.carousel-inner > div.carousel-item img{
-        max-width: 100%;
-        max-height: 200px;
-    }
-    /* End carousel caption */
+    /* End Page 'post.html' */
   }

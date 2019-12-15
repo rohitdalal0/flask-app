@@ -2,14 +2,18 @@ from flask import Flask, render_template, url_for, redirect, flash, request, fla
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_required, login_user
 from flask_bootstrap import Bootstrap
-
+from werkzeug.utils import secure_filename
+import os
 
 
 
 app = Flask(__name__, static_folder='static', template_folder='template')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://rohit:password@localhost/flask'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['SECRET_KEY'] = 'SecretKey'
+app.config['SECRET_KEY'] = 'ITSHOULDBESECRETKEY'
+app.config['UPLOAD_FOLDER'] = 'static/img/'
+
+ALLOW_EXTENSIONS = {'jpg','png','txt','jpeg','gif','pdf'}
 
 db = SQLAlchemy(app)
 login_manager = LoginManager()
@@ -28,21 +32,20 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def user_loader(user_id):
-    return Login.qqueryuery.get(user_id)
+    return Login.query.get(user_id)
 
 
 
 # routes
 @app.route('/')
 def index():
-    all_posts = db.session.query(Post).all()
-    return render_template('index.html', posts=all_posts)
+    one = db.session.query(Post).all()[:1]
+    two = db.session.query(Post).all()[1:2]
+    three = db.session.query(Post).all()[2:3]
+    four = db.session.query(Post).all()[3:4]
+    five = db.session.query(Post).all()[4:5]
+    return render_template('index.html', one=one, two=two, three=three, four=four, five=five)
 
-
-@app.route('/post')
-def post():
-    all_posts = db.session.query(Post).all()
-    return render_template('post.html', posts=all_posts)
 
 @app.route('/about')
 def about():
@@ -53,15 +56,47 @@ def about():
 def contact():
     return render_template('contact.html')
 
-@app.route('/add_post')
-def add_post():
-    return render_template('add_post.html')
+@app.route('/public/post', methods=['GET','POST'])
+def new_post():
+    if request.method == 'POST':
+        title = request.form['title']
+        body = request.form['body']
+        tag = request.form['tag']
+        file = request.files['file']
+
+        if title != '' and body != '' and tag != '':
+            if file.filename !="":
+                    # checking file extension
+                    def check_file(file):
+                        return '.' in file and file.rsplit('.', 1)[1].lower() in ALLOW_EXTENSIONS
+
+                    if check_file(file.filename):
+                        file_name = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+                        file.save(file_name)
+
+                        post = Post(title=title, body=body, tag=tag, url='img/'+file.filename)
+                        db.session.add(post)
+                        db.session.commit()
+                        flash('Successfully posted!')
+                        return render_template('index.html')
+
+                    else:
+                        flash('File isn\'t secure')
+                        return redirect(url_for('new_post'))
+            else:
+                flash('No file selected!')
+                return redirect(url_for('new_post'))
+        else:
+            flash('Please, fill all the input!')
+            return redirect(url_for('new_post'))
+    else:
+        return render_template('add_post.html')
 
 
 # url shortcut
-@app.route('/<string:no>/post')
+@app.route('/post/<int:no>')
 def post_direction(no):
-    one_post = db.session.query(Post).filter_by(id=no)
+    one_post = db.session.query(Post).filter_by(id=no).first()
     return render_template('post.html', posts=one_post)
 
 # login and signup page

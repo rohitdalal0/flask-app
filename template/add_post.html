@@ -5,14 +5,14 @@
 
 {% if errors %}
 {% for error in errors %}
-<span class="alert alert-danger mt-3 float-right w-8 position-absolute text-center">{{error}}</span>
+<span id="notification" class="alert alert-danger mt-3 float-right w-8 position-absolute text-center" style="cursor: pointer;" onclick="$('#notification').hide()">{{error}}</span>
 {% endfor %}
 {% endif %}
 
 {% endwith %}
-<form action="/add_post" method="post" role="form" enctype="multipart/form-data">
+<form action="/public/post" method="post" role="form" enctype="multipart/form-data">
   <div class="container text-center bg-transparent mt-5">
-    <input class="p-2 w-75 bg-transparent" name="head" placeholder="Title" type="text" style="border-bottom: 1px solid tomato;"/>
+    <input class="p-2 w-75 bg-transparent" name="title" placeholder="Title" type="text" style="border-bottom: 1px solid tomato;"/>
     <textarea class=" p-2 w-75 h-75 bg-transparent" cols="30" name="body" placeholder="Body" rows="15" style="border-bottom: 1px solid tomato;"></textarea>
     <input class="p-2 w-75 bg-transparent" name="tag" placeholder="Tag" type="text" style="border-bottom: 1px solid tomato;"/>
     <br><br>
